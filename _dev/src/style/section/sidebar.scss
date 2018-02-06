@@ -1,15 +1,24 @@
 /*! ===== aside.sidebar ===== */
 
 aside.sidebar {
+	min-width: 80px;
 	flex: 0 0 auto;
-	padding: 30px 20px;
-	text-align: center;
 	background-color: #000;
 }
 
 .menu {
+	position: relative;
+	padding: 30px 20px;
+	text-align: center;
+	transition: .5s;
+	
+	&_fixed {
+		position: fixed;
+		top: 0;
+	}
+
 	&-list {
-		
+
 	}
 	
 	&-item {
@@ -23,8 +32,8 @@ aside.sidebar {
 				border-radius: 0;
 
 				&:hover {
-					box-shadow: 0 0 20px #fff;
-					transform: scale(1.1) rotate(45deg);
+					// box-shadow: 0 0 20px #fff;
+					// transform: scale(1.1) rotate(45deg);
 				}
 			}
 			.menu-icon {
@@ -33,15 +42,15 @@ aside.sidebar {
 		}
 
 		&_active {
-			&:after {
-				content: '';
-				@include center-translate();
-				left: auto;
-				right: -45px;
-				border-left: 17px solid #000;
-				border-top: 16px solid transparent;
-				border-bottom: 16px solid transparent;
-			}
+			// &:after {
+			// 	content: '';
+			// 	@include center-translate();
+			// 	left: auto;
+			// 	right: -45px;
+			// 	border-left: 17px solid #000;
+			// 	border-top: 16px solid transparent;
+			// 	border-bottom: 16px solid transparent;
+			// }
 		}
 	}
 	
@@ -55,8 +64,11 @@ aside.sidebar {
 		transition: .3s;
 
 		&:hover {
-			box-shadow: 0 0 20px #fff;
-			transform: scale(1.1);
+			// box-shadow: 0 0 20px #fff;
+			// transform: scale(1.1);
+			.menu-icon {
+				fill: red;
+			}
 		}
 	}
 
@@ -64,5 +76,24 @@ aside.sidebar {
 		@include center-translate();
 		width: 20px;
 		height: 20px;
+		transition: .5s;
+	}
+}
+
+.menu-pointer {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: -17px;
+	border-left: 17px solid black;
+	border-top: 16px solid transparent;
+	border-bottom: 16px solid transparent;
+	transition: .5s;
+
+	&_dynamic {
+		// transform: scale(-1);
+		transform: rotate(180deg);
+		border-left-color: red;
+
 	}
 }
