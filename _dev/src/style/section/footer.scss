@@ -1,0 +1,21 @@
+/*! ===== footer styles ===== */
+
+.footer {
+	padding: 30px;
+	font-size: 12px;
+
+	&-left {
+		float: left;
+		width: 50%;
+	}
+	
+	&-right {
+		float: right;
+		width: 50%;
+		text-align: right;
+	}
+
+	&__link {
+		color: #000;
+	}
+}

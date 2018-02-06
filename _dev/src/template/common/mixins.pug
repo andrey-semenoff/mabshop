@@ -1,0 +1,18 @@
+//- Create standart list
+mixin ul-list(cls, array, active_el, active_cls)
+	ul(class=cls + "__list")
+		each item, i in array
+			- var clsName = cls + "__link"
+
+			if i == active_el
+				- clsName = clsName + " " + active_cls
+			
+			li(class= cls + "__item")
+				a(href="#", class= clsName)= item
+
+
+//- Add svg path
+mixin symbol(id, cls)
+	svg(class=cls)
+		use(xlink:href="#"+id)
+				

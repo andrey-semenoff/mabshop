@@ -1,0 +1,21 @@
+doctype html
+html(lang="ru-RU")
+	head
+		include section/_head
+	body
+		include common/mixins
+
+		include section/header
+	
+		main.main
+			include section/sidebar
+	
+			.page
+				.content
+					block content
+
+				include section/footer
+
+		//- | Блок для svg-спрайта
+		div(style="display: none")
+			include common/_spriteIcons.svg
