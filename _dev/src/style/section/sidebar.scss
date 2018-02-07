@@ -38,7 +38,13 @@ aside.sidebar {
 
 		&_active {
 			.menu-icon {
-				fill: red;
+				fill: goldenrod;
+			}
+		}
+
+		&_updated {
+			.menu-link {
+				animation: shine 3s infinite;
 			}
 		}
 	}
@@ -54,7 +60,7 @@ aside.sidebar {
 
 		&:hover {
 			.menu-icon {
-				fill: red;
+				fill: goldenrod;
 			}
 		}
 	}
@@ -64,6 +70,20 @@ aside.sidebar {
 		width: 17px;
 		height: 17px;
 		transition: .5s;
+	}
+}
+
+@keyframes shine {
+	0% {
+		box-shadow: 0px 0px 0 0 goldenrod;
+	}
+
+	50% {
+		box-shadow: 0px 0px 19px 6px goldenrod;
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 goldenrod;
 	}
 }
 
@@ -79,6 +99,6 @@ aside.sidebar {
 
 	&_dynamic {
 		transform: rotate(180deg);
-		border-left-color: red;
+		border-left-color: goldenrod;
 	}
 }

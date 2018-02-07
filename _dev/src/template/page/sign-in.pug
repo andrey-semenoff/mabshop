@@ -9,7 +9,7 @@ block content
 	
 				label.form__label.required(for="user-name")
 					.form__label-text Телефон или e-mail *:
-					input.form__input(type="text" name="text" id="user-name")
+					input.form__input(type="text" name="text" id="user-name" autofocus)
 						
 				label.form__label.required(for="user-password")
 					.form__label-text Пароль:
@@ -32,5 +32,5 @@ block content
 
 
 			._row.sign-in__services
-				a.sign-in__forgot(href="#") Забыли пароль?
-				a.sign-in__register(href="#") Регистрация
+				a.sign-in__forgot(href="forgotpass.html") Забыли пароль?
+				a.sign-in__register(href="sign-up.html") Регистрация

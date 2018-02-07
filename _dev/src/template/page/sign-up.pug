@@ -10,7 +10,7 @@ block content
 				._row.form__group
 					label.form__label.required(for="user-name")
 						.form__label-text Имя:
-						input.form__input(type="text" name="text" id="user-name")
+						input.form__input(type="text" name="text" id="user-name" autofocus)
 
 					label.form__label.required(for="user-name")
 						.form__label-text Фамилия:
@@ -32,3 +32,6 @@ block content
 
 				.form__btn-holder
 					button.button.form__button Зарегистрироваться
+					
+			._row.sign-in__services
+				a.sign-in__forgot(href="sign-in.html") Вход

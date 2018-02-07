@@ -1,0 +1,19 @@
+extends ../main
+
+block content
+	.forgotpass
+		._container
+			.title.sign-in__title Восстановление пароля
+
+			form.form.form_sign-in(action="/user/forgotpass" method="POST")
+	
+				label.form__label.required(for="user-name")
+					.form__label-text Телефон или e-mail *:
+					input.form__input(type="text" name="text" id="user-name" autofocus)
+						
+				.form__btn-holder
+					button.button.form__button Восстановить пароль
+
+			._row.sign-in__services
+				a.sign-in__forgot(href="sign-in.html") Вход
+				a.sign-in__register(href="sign-up.html") Регистрация
