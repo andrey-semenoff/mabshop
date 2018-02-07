@@ -4,15 +4,30 @@
 	padding: 30px;
 	font-size: 12px;
 
+	@include media(480) {
+		padding: 15px;
+	}
+
 	&-left {
 		float: left;
 		width: 50%;
+
+		@include media(480) {
+			width: 100%;
+			text-align: center;
+		}
 	}
 	
 	&-right {
 		float: right;
 		width: 50%;
 		text-align: right;
+
+		@include media(480) {
+			width: 100%;
+			margin-top: 15px;
+			text-align: center;
+		}
 	}
 
 	&__link {

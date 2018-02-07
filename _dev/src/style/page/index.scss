@@ -66,6 +66,13 @@
 		width: 33.33%;
 		text-align: center;
 		margin-top: 30px;
+
+		@include media(768) {
+			width: 50%;
+		}
+		@include media(550) {
+			width: 100%;
+		}
 	}
 	
 	&-link {
@@ -90,6 +97,11 @@
 		border: 2px solid #000;
 		transition: .5s;
 		overflow: hidden;
+
+		@include media(1200) {
+			width: 200px;
+			height: 200px;
+		}
 	}
 	
 	&-img {

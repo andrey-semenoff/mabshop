@@ -4,11 +4,20 @@ header.header {
   background-color: #000;
   text-align: center;
   padding: 40px 0;
+
+
+	@include media(480) {
+		padding: 15px;
+	}
 }
 
 .logo {
 	display: inline-block;
 	width: 315px;
+
+	@include media(480) {
+		width: 70%;
+	}
 
 	&__link {
 		display: block;

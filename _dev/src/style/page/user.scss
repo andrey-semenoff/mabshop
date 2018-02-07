@@ -25,11 +25,16 @@
 }
 
 .sign-in, .sign-up, .forgotpass {
+	padding: 0 15px;
 
 	&__right {
 		float: left;
 		width: 60%;
 		padding: 25px;
+
+		@include media(768) {
+			width: 100%;
+		}
 	}
 
 	.video-holder {
@@ -40,6 +45,10 @@
 		float: right;
 		width: 40%;
 		padding: 25px;
+
+		@include media(768) {
+			width: 100%;
+		}
 	}
 
 	&__title {
@@ -58,6 +67,10 @@
 			&_password-confirm {
 				width: 70%;
 				margin: 25px auto 0;
+
+				@include media(640) {
+					width: 100%;
+				}
 			}
 		}
 
@@ -74,6 +87,11 @@
 
 	.form__button {
 		min-width: 150px;
+
+		@include media(640) {
+			min-width: inherit;
+			width: 100%;
+		}
 	}
 
 	&__services {
@@ -85,6 +103,11 @@
 			width: 50%;
 			color: #000;
 			text-decoration: underline;
+
+			@include media(480) {
+				width: 100%;
+				margin-top: 15px;
+			}
 		}
 	}
 }

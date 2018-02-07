@@ -9,8 +9,31 @@
 	&-item {
 		float: left;
 		width: 33.33%;
-		text-align: center;
 		padding: 15px;
+
+		@include media(992) {
+			width: 50%;
+		}
+
+		@include media(640) {
+			width: 100%;
+		}
+
+		&:nth-of-type(3n+1) {
+			clear: both;
+			@include media(992) {
+				clear: none;
+			}
+		}
+		
+		&:nth-of-type(2n+1) {
+			@include media(992) {
+				clear: both;
+			}
+			@include media(640) {
+				clear: none;
+			}
+		}
 	}
 
 	&-link {
@@ -36,6 +59,14 @@
 				width: 40px;
 				height: 40px;
 				max-width: 10%;
+
+				@include media(400) {
+					display: block;
+					width: 40%;
+					height: auto;
+					max-width: none;
+					margin: auto;
+				}
 			}
 		}
 
@@ -44,6 +75,13 @@
 			vertical-align: middle;
 			max-width: 85%;
 			margin-left: 2%;
+
+			@include media(400) {
+				max-width: 100%;
+				display: block;
+				text-align: center;
+				margin-top: 15px;
+			}
 		}
 	}
 
@@ -66,14 +104,13 @@
 .form_feedback {
 	max-width: 600px;
 	margin: 50px auto;
+	padding: 0 15px;
 	text-align: center;
 
 
 	.form__label-text {
 		text-align: left;
 	}
-
-
 
 	.form__textarea {
 		width: 100%;
