@@ -9,4 +9,8 @@ header.header {
 .logo {
 	display: inline-block;
 	width: 315px;
+
+	&__link {
+		display: block;
+	}
 }

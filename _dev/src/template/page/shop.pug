@@ -1,0 +1,81 @@
+extends ../main
+
+block content
+	._container
+		.shop
+			.shop-top
+				._row
+					.shop-category Категория: 
+						span.shop-category__name Электроника, бытовая техника, одежда, прочее
+					button.button.shop-fav
+						+symbol('star', 'shop-fav__icon')
+				.shop-logo-holder
+					img.shop-logo(src="img/trademarks/eldorado.jpg", alt="")
+				._row.shop-btn-holder
+					a.button.shop-button.shop-button_site(href="#") на сайт
+					.button.shop-button.shop-button_promo
+						.shop-button_promo__text промокод
+						.shop-button_promo__code-holder(title="Нажмите чтобы скопировать код")
+							span.shop-button_promo__code 123231412da56
+						.shop-button_promo__msg
+
+			.shop-desc
+				p Вас интересует бытовая техника, компьютеры, софт или товары для активного отдыха? Все это вы можете купить прямо сейчас, сэкономив уйму времени! 
+				p Интернет-магазин Rozetka™ с радостью поможет вам избежать необходимости посещать десятки магазинов. Вы можете заказать любой товар, не вставая со своего кресла, а наш курьер вовремя доставит покупку по указанному адресу. Интернет магазин (Украина) Rozetka™ действует на территории всей страны. Жители любых городов могут без лишних хлопот посетить наш интернет-магазин (Харьков, Киев и другие города).
+				p Вне зависимости от того, где вы находитесь на данный момент, вы сможете заказать товар, что, согласитесь, очень удобно. Какие же преимущества предлагает наш интернет-магазин электроники, телефонов и прочих товаров? Наиболее существенный факт – наличие тысяч позиций, которые гарантированно имеются на складе. Вы сможете посетить наш интернет магазин и купить любые товары по невысокой цене. Вам необходим холодильник, стиральная машина или микроволновая печь?
+				p Интернет магазин бытовой техники (Киев, Харьков) поможет вам. Наличие множества решений позволит подобрать устройство с требуемыми характеристиками и стоимостью. Интернет-магазин техники (Харьков, Днепропетровск) Rozetka – это многообразие предложений на любой вкус. Чтобы заказать товар, вам не придется никуда ехать или идти, т.к. все операции совершаются в виртуальном режиме. Именно поэтому Rozetka – это интернет-магазин телевизоров, холодильников и иной техники, покупать в котором выгодно и приятно.
+
+			.comments
+				form.form.form_comments(action="/comment/add" method="POST")
+					.form__title Добавить комментарий
+					label.form__label.required(for="comment-text")
+						.form__label-text Текст комментария:
+						textarea.form__textarea(name="text" id="comment-text")
+					.form__btn-holder
+						button.button.form__button Отправить
+
+				ul.comments-list
+					li.comments-item
+						.comments-item__user
+							._row.comments-item__top
+								.comments-item__avatar-holder
+									+symbol('avatar', 'comments-item__avatar')
+								.comments-item__info
+									.comments-item__date 17.01.2018
+									.comments-item__author Константин
+							.comments-item__text Вас интересует бытовая техника, компьютеры, софт или товары для активного отдыха? Все это вы можете купить прямо сейчас, сэкономив уйму времени! Интернет-магазин Rozetka™ с радостью поможет вам избежать необходимости посещать десятки магазинов. Вы можете заказать любой товар, не вставая со своего кресла, а наш курьер вовремя доставит покупку по указанному адресу. Интернет магазин (Украина) Rozetka™ действует на территории всей страны. Жители любых городов могут без лишних хлопот посетить наш интернет-магазин (Харьков, Киев и другие города).
+
+						.comments-item__admin
+							._row.comments-item__top
+								.comments-item__avatar-holder
+									img.comments-item__avatar(src="img/admin.svg", alt="")
+								.comments-item__info
+									.comments-item__date 17.01.2018
+									.comments-item__author Admin
+							.comments-item__text Спасибо за Ваш отзыв
+
+
+					li.comments-item
+						.comments-item__user
+							._row.comments-item__top
+								.comments-item__avatar-holder
+									+symbol('avatar', 'comments-item__avatar')
+								.comments-item__info
+									.comments-item__date 17.01.2018
+									.comments-item__author Гавр
+							.comments-item__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, ea, quibusdam accusamus facilis quos qui fugiat laboriosam dolore voluptates, aperiam sed. Rem distinctio, vel alias nesciunt itaque enim, nam dolorum!
+
+						.comments-item__admin
+							._row.comments-item__top
+								.comments-item__avatar-holder
+									img.comments-item__avatar(src="img/admin.svg", alt="")
+								.comments-item__info
+									.comments-item__date 17.01.2018
+									.comments-item__author Admin
+							.comments-item__text Lorem ipsum dolor sit amet.
+
+				.btn-holder
+					button.button ещё комментарии
+			
+
+

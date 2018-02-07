@@ -1,0 +1,31 @@
+extends ../main
+
+block content
+	.cabinet
+		._container
+			.title.cabinet__title Личный кабинет
+
+			form.form.form_user(action="/user" method="POST")
+	
+				label.form__label.required(for="user-name")
+					.form__label-text Имя:
+					input.form__input(type="text" name="text" id="user-name")
+
+				label.form__label.required(for="user-name")
+					.form__label-text Фамилия:
+					input.form__input(type="text" name="text" id="user-surname")
+
+				label.form__label.required(for="user-surname")
+					.form__label-text Email/Телефон:
+					input.form__input(type="text" name="text" id="user-email")
+						
+				label.form__label.required(for="user-password")
+					.form__label-text Пароль:
+					input.form__input(type="password" name="password" id="user-password")
+						
+				label.form__label.required(for="user-password-confirm")
+					.form__label-text Подтвердите пароль:
+					input.form__input(type="password" name="text" id="user-password-confirm")
+
+				.form__btn-holder
+					button.button.form__button Сохранить

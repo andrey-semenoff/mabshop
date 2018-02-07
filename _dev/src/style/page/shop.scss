@@ -1,0 +1,219 @@
+/*! ===== shop ===== */
+.shop {
+
+	&-top {
+		padding: 10px 25px;
+		border-bottom: 3px solid #000;
+	}
+
+	&-category {
+		float: left;
+		font-weight: bold;
+
+		&__name {
+			font-weight: normal;
+		}
+	}
+
+	&-fav {
+		float: right;
+		padding: 5px 10px;
+
+		&__icon {
+			width: 17px;
+			height: 17px;
+		}
+	}
+
+
+	&-logo {
+		height: 250px;
+
+		&-holder {
+
+		}
+	}
+
+
+	&-btn-holder {
+		margin-top: 40px;
+	}
+
+	&-button {
+		padding: 10px 40px;
+
+		&_site {
+			float: left;
+		}
+
+		&_promo {
+			float: right;
+			position: relative;
+			transition: .5s;
+
+			&__text {
+				
+			}
+
+			&__code-holder {
+				display: none;
+				position: relative;
+			}
+
+			&__code {
+				display: inline-block;
+			}
+
+			&__msg {
+				display: none;
+				position: absolute;
+				bottom: 125%;
+				left: 50%;
+				transform: translateX(-50%);
+				background-color: #000;
+				border-radius: 5px;
+				color: #fff;
+				padding: 5px 10px;
+				text-align: center;
+				font-size: 12px;
+
+				&:after {
+					content: '';
+					position: absolute;
+					bottom: -8px;
+					left: 50%;
+					transform: translateX(-50%);
+					border-top: 8px solid #000;
+					border-left: 4px solid transparent;
+					border-right: 4px solid transparent;
+				}
+			}
+		}
+	}
+
+	&-desc {
+		padding: 25px;
+		text-align: justify;
+	}
+}
+
+
+.form {
+
+	&__title {
+		font-size: 20px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	&__label {
+		display: block;
+		margin-top: 15px;
+
+		&.required {
+			.form__label-text:after {
+				content: '*';
+				display: inline-block;
+				color: red;
+				margin-left: 5px;
+			}
+		}
+	}
+		
+	&__textarea {
+		display: inline-block;
+		margin-top: 5px;
+		min-height: 90px;
+		max-height: 200px;
+		width: 700px;
+		resize: vertical;
+		border-color: #7f7f7f;
+		padding: 10px;
+	}
+
+	&__group {
+		.form__label {
+			float: left;
+			width: 48%;
+
+			&:nth-of-type(2n) {
+				float: right;
+			}
+
+			.form__input {
+				width: 100%;
+				padding: 10px;
+			}
+		}
+	}
+
+
+	&__btn-holder {
+		margin-top: 20px;
+	}
+
+	&__button {
+
+	}
+
+}
+
+.comments, .feedback {
+	padding: 25px;
+
+	&-list[class] {
+		margin-top: 15px;
+	}
+
+	&-item {
+		padding: 30px 0;
+
+		&:not(:first-child) {
+			border-top: 1px solid #ccc;
+		}
+
+		&__admin {
+			margin: 15px 0 0 40px;
+		}
+
+		&__top {
+			
+		}
+
+		&__avatar-holder {
+			float: left;
+			width: 35px;
+			height: 35px;
+		}
+
+		&__avatar {
+			max-width: 100%;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&__info {
+			float: left;
+			margin-left: 10px;
+		}
+
+		&__date {
+			color: #7f7f7f;
+			font-style: italic;
+			font-size: 12px;
+		}
+
+		&__author {
+
+		}
+
+		&__text  {
+			margin-top: 10px;
+		}
+	}
+	
+	.btn-holder {
+		margin-top: 35px;
+	}
+}

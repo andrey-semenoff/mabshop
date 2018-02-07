@@ -1,0 +1,126 @@
+/*! ===== cabinet ===== */
+.cabinet {
+	padding: 25px;
+
+	&__title {
+		text-align: center;
+		margin-top: 70px;
+	}
+
+	.form {
+		margin-top: 25px;
+		max-width: 450px;
+		margin: auto;
+
+		&__label {
+			margin-top: 15px;
+		}
+
+		&__input {
+			width: 100%;
+			padding: 10px;
+			margin-top: 10px;
+		}
+	}
+}
+
+.sign-in, .sign-up {
+
+	&__title {
+		text-align: center;
+		margin-top: 100px;
+	}
+
+	.form {
+		margin-top: 25px;
+		max-width: 400px;
+		margin: auto;
+
+		&__label {
+			margin-top: 25px;
+
+			&_password-confirm {
+				width: 70%;
+				margin: 25px auto 0;
+			}
+		}
+
+		&__input {
+			width: 100%;
+			padding: 10px;
+			margin-top: 10px;
+		}
+	}
+
+	.form__btn-holder {
+		text-align: center;
+	}
+
+	.form__button {
+		min-width: 150px;
+	}
+
+	&__services {
+		margin-top: 20px;
+		text-align: center;
+
+		a {
+			display: inline-block;
+			width: 20%;
+			color: #000;
+			text-decoration: underline;
+		}
+	}
+}
+
+.socials {
+	margin-top: 20px;
+	text-align: center;
+
+	&-list {
+
+	}
+
+	&-item {
+		position: relative;
+		display: inline-block;
+	}
+
+	&-item__link {
+		position: relative;
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		margin: 0 10px;
+
+		.fa {
+			@include center-translate();
+			color: #fff;
+			font-size: 25px;
+		}
+
+		&_vk {
+			background-color: #507299;
+		}
+
+		&_facebook {
+			background-color: #3b5998;
+		}
+
+		&_instagram {
+			background-color: #c03aa8;
+		}
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+
+.sign-up {
+	.form {
+		max-width: 600px;
+
+	}
+}

@@ -1,16 +1,14 @@
 /*! ===== General styles ===== */
 
 @include font-face('FontAwesome', '../fonts');
-@include font-face('RobotoRegular', '../fonts');
+@include font-face('OpenSans-Regular', '../fonts');
 
 $container-width: 1920px;
 $body-color: #fff;
-$body-font: 'RobotoRegular', Helvetica, sans-serif;
+$body-font: 'OpenSans-Regular', Helvetica, sans-serif;
 $body-font-color: #000;
 
 *, *:before, *:after {
-  margin: 0;
-  padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -42,9 +40,16 @@ footer {
 }
 
 main {
+  width: 1920px;
+  margin: auto;
   flex: 1 0 auto;
   display: flex;
   flex-direction: row;
+
+  @include media(1920) {
+    width: auto;
+    margin: 0;
+  }
 }
 
 .page {
@@ -67,17 +72,19 @@ img {
   max-width: 100%;
 }
 
-ul {
-  list-style-type: none;
-}
-
 fieldset {
   border: none;
   margin: 0;
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+ul[class] {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1[class], h2[class], h3[class], h4[class], h5[class], h6[class], p[class] {
   margin: 0;
   padding: 0;
 }
@@ -101,19 +108,26 @@ h1, h2, h3, h4, h5, h6, p {
   display: inline-block;
   background-color: #000;
   color: #fff;
+  fill: #fff;
   padding: 15px 20px;
-  border: none;
+  border: 1px solid transparent;
   transition: .5s;
+
 
   &:hover {
     cursor: pointer;
-    background-color: #333;
+    background-color: #fff;
+    fill: #000;
+    color: #000;
+    border-color: #000;
   }
 }
 
 /*! --- standart title --- */
 .title {
-
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 /*! --- owl-carousel --- */

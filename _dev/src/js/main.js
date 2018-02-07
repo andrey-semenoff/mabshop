@@ -69,6 +69,31 @@ $(function () {
      }).removeClass('menu-pointer_dynamic');
   });
 
+  //shop-button_promo
+  $('.shop-button_promo').on('click', function() {
+    var $this = $(this),
+        $text = $this.children('.shop-button_promo__text'),
+        $holder = $this.children('.shop-button_promo__code-holder');
+  
+    $text.toggle();
+    $holder.toggle();
+  });
+
+  $('.shop-button_promo__code-holder').on('click', function(e) {
+    e.stopPropagation();
+
+    var $this = $(this),
+        $code = $this.children('.shop-button_promo__code'),
+        $msg = $('.shop-button_promo__msg');
+  
+    // console.log($code.text());
+    $msg.text(copyText($code)).show(function() {
+      setTimeout(function() {
+        $msg.hide();
+      }, 2000);
+    });
+  });
+
 });
 
 
@@ -91,3 +116,44 @@ function setPointerTop($pointer, $target, state) {
     top: top + 'px'
   });
 }
+
+// Select text within element
+function copyText($el) {
+  if (document.selection) {
+      var range = document.body.createTextRange();
+      range.moveToElementText($el[0]);
+      range.select();
+  } else if (window.getSelection) {
+      var range = document.createRange();
+      range.selectNode($el[0]);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+  }
+
+  var answer = '';
+  
+  try {
+     var ok = document.execCommand('copy');
+
+     if (ok) answer = 'Код скопирован!';
+  } catch (err) {}
+
+  return answer;
+}
+
+// function copyText($el) {
+//   var answer = '';
+
+//   $el.select();
+
+//   try {
+//      var ok = document.execCommand('copy');
+
+//      if (ok) answer = 'Copied!';
+//      else answer = 'Unable to copy!';
+//   } catch (err) {
+//      answer = 'Unsupported Browser!';
+//   }
+
+//   return answer;
+// }

@@ -1,0 +1,112 @@
+/*! ===== categories ===== */
+.categories {
+	padding: 25px;
+
+	&-list {
+
+	}
+
+	&-item {
+		float: left;
+		width: 33.33%;
+		text-align: center;
+		padding: 15px;
+	}
+
+	&-link {
+		display: inline-block;
+		width: 100%;
+		padding: 15px 10px;
+		border: 2px solid #000;
+		color: #000;
+		transition: .5s;
+
+		&:hover {
+			box-shadow: inset 0 0 25px #000;
+		}
+
+		&__icon {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+
+			&-holder {
+				display: inline-block;
+				vertical-align: middle;
+				width: 40px;
+				height: 40px;
+				max-width: 10%;
+			}
+		}
+
+		&__name {
+			display: inline-block;
+			vertical-align: middle;
+			max-width: 85%;
+			margin-left: 2%;
+		}
+	}
+
+	.btn-holder {
+		margin-top: 25px;
+	}
+}
+
+.category .shop-category {
+	padding: 15px;
+}
+
+.partnership {
+
+	&__text {
+		padding: 15px 25px;
+	}
+}
+
+.form_feedback {
+	max-width: 600px;
+	margin: 50px auto;
+	text-align: center;
+
+
+	.form__label-text {
+		text-align: left;
+	}
+
+
+
+	.form__textarea {
+		width: 100%;
+		height: 300px;
+		max-height: 600px;
+		padding: 10px 15px;
+	}
+}
+
+.video {
+	padding: 25px;
+
+	&-holder {
+	  display: block;
+	  position: relative;
+	  height: 0;
+	  overflow: hidden;
+	}
+
+	&-holder_16x9 {
+	  padding-bottom: 56.25%;
+	}
+
+	&-holder_4x3 {
+	  padding-bottom: 75%;
+	}
+
+	&-holder iframe, &-holder img {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	}
+}
+

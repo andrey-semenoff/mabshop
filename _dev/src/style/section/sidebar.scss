@@ -30,11 +30,6 @@ aside.sidebar {
 			.menu-link {
 				transform: rotate(45deg);
 				border-radius: 0;
-
-				&:hover {
-					// box-shadow: 0 0 20px #fff;
-					// transform: scale(1.1) rotate(45deg);
-				}
 			}
 			.menu-icon {
 				transform: translate(-50%,-50%) rotate(-45deg);
@@ -42,15 +37,9 @@ aside.sidebar {
 		}
 
 		&_active {
-			// &:after {
-			// 	content: '';
-			// 	@include center-translate();
-			// 	left: auto;
-			// 	right: -45px;
-			// 	border-left: 17px solid #000;
-			// 	border-top: 16px solid transparent;
-			// 	border-bottom: 16px solid transparent;
-			// }
+			.menu-icon {
+				fill: red;
+			}
 		}
 	}
 	
@@ -64,8 +53,6 @@ aside.sidebar {
 		transition: .3s;
 
 		&:hover {
-			// box-shadow: 0 0 20px #fff;
-			// transform: scale(1.1);
 			.menu-icon {
 				fill: red;
 			}
@@ -74,8 +61,8 @@ aside.sidebar {
 
 	&-icon {
 		@include center-translate();
-		width: 20px;
-		height: 20px;
+		width: 17px;
+		height: 17px;
 		transition: .5s;
 	}
 }
@@ -91,9 +78,7 @@ aside.sidebar {
 	transition: .5s;
 
 	&_dynamic {
-		// transform: scale(-1);
 		transform: rotate(180deg);
 		border-left-color: red;
-
 	}
 }
