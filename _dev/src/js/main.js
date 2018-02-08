@@ -45,12 +45,15 @@ $(function () {
   $(document).scroll(function() {
     var scroll_top = $(this).scrollTop(),
         $menu = $('.menu'),
+        $burger = $('.burger'),
         sidebar_top = $('.sidebar').offset().top;
 
     if( scroll_top >= sidebar_top ) {
       $menu.addClass('menu_fixed');
+      $burger.addClass('burger_fixed');
     } else {
-       $menu.removeClass('menu_fixed');
+      $menu.removeClass('menu_fixed');
+      $burger.removeClass('burger_fixed');
     }
   });
 
@@ -94,6 +97,14 @@ $(function () {
     });
   });
 
+// burger toggle
+  $(document).on('click', '.burger', function () {
+    var $this = $(this),
+        $sidebar = $this.parent();
+
+    $this.toggleClass('burger_close');
+    $sidebar.toggleClass('sidebar_open');
+  });
 });
 
 

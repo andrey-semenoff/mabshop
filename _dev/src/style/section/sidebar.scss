@@ -1,16 +1,32 @@
 /*! ===== aside.sidebar ===== */
 
 aside.sidebar {
+	position: relative;
 	min-width: 80px;
 	flex: 0 0 auto;
-	background-color: #000;
+	transition: .5s;
+
+	@include media(480) {
+		position: absolute;
+		top: 0;
+		left: -80px;
+		height: 100%;
+	}
+
+	&_open {
+		left: 0;
+	}
 }
 
 .menu {
 	position: relative;
+	min-width: 80px;
+	height: 100%;
+	background-color: #000;
 	padding: 30px 20px;
 	text-align: center;
 	transition: .5s;
+	z-index: 10;
 	
 	&_fixed {
 		position: fixed;
@@ -100,5 +116,89 @@ aside.sidebar {
 	&_dynamic {
 		transform: rotate(180deg);
 		border-left-color: goldenrod;
+	}
+
+	@include media(480) {
+		display: none !important;
+	}
+}
+
+// burger
+.burger {
+	display: none;
+	position: absolute;
+	right: -80px;
+	top: 0;
+	z-index: 5;
+	border-top: 40px solid black;
+  border-bottom: 40px solid transparent;
+  border-left: 40px solid black;
+  border-right: 40px solid transparent;
+  transition: .5s;
+
+	&_fixed {
+    position: fixed;
+    top: 0;
+    right: auto;
+    left: 0;
+    z-index: 20;
+
+    &.burger_close {
+    	left: 80px;
+    }
+	}
+
+	&_close {
+		.burger__bar {
+		    width: 20px;
+		    top: -20px;
+		    left: -25px;
+
+			&_top {
+		    transform: rotate(-45deg);
+			}
+			&_mid {
+				opacity: 0 !important;
+			}
+			&_bot {
+		    transform: rotate(45deg);
+			}
+		}
+	}
+
+	&:hover {
+		cursor: pointer;
+
+		.burger__bar {
+			opacity: 0.5;
+		}
+	}
+
+	@include media(480) {
+		display: block;
+		float: right;
+	}
+
+	&__bar {
+		position: absolute;
+		height: 2px;
+		background-color: #fff;
+		transition: all 0.5s;
+
+		&_top {
+			top: -25px;
+    	left: -30px;
+			width: 40px;
+		}
+		&_mid {
+	    top: -15px;
+	    left: -30px;
+	    width: 30px;
+		}
+		&_bot {
+	    top: -5px;
+	    left: -30px;
+	    width: 20px;
+		}
 	}
 }
