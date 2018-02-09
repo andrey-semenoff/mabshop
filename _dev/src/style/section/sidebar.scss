@@ -54,7 +54,7 @@ aside.sidebar {
 
 		&_active {
 			.menu-icon {
-				fill: goldenrod;
+				fill: red;
 			}
 		}
 
@@ -76,7 +76,7 @@ aside.sidebar {
 
 		&:hover {
 			.menu-icon {
-				fill: goldenrod;
+				fill: red;
 			}
 		}
 	}
@@ -91,15 +91,15 @@ aside.sidebar {
 
 @keyframes shine {
 	0% {
-		box-shadow: 0px 0px 0 0 goldenrod;
+		box-shadow: 0px 0px 0 0 red;
 	}
 
 	50% {
-		box-shadow: 0px 0px 19px 6px goldenrod;
+		box-shadow: 0px 0px 19px 6px red;
 	}
 
 	100% {
-		box-shadow: 0 0 0 0 goldenrod;
+		box-shadow: 0 0 0 0 red;
 	}
 }
 
@@ -115,7 +115,7 @@ aside.sidebar {
 
 	&_dynamic {
 		transform: rotate(180deg);
-		border-left-color: goldenrod;
+		border-left-color: red;
 	}
 
 	@include media(480) {
